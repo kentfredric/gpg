@@ -1,0 +1,73 @@
+To all it may concern, I have done one of my semi-annual key replacements.
+
+These replacements will now be less often, and yearly instead, because I'm
+just frankly sick of signing keys =).
+
+The previous replacement occurred here: https://gist.github.com/1569478
+
+The old key was slated to expire at the end of June, but I got lazy. 
+So had to extend to July. 
+
+Old Key Prior to extension:
+
+pub   4096R/81EC638ED7AE97A6 2012-01-06 [expired: 2012-07-04]
+      Key fingerprint = 4132 B874 41EA 24A4 EB5E  6DE1 81EC 638E D7AE 97A6
+uid               [ expired] Kent Fredric (2012 Q1 & Q2) <kentfredric@gmail.com>
+uid               [ expired] Kent Fredric <kentnl@cpan.org>
+sub   4096R/F9A6BF20EF5315EF 2012-01-06 [expired: 2012-07-04]
+sub   4096g/567647887810B389 2012-01-06 [expired: 2012-07-04]
+sub   3072D/0F597029717B1CC6 2012-01-06 [expired: 2012-07-04]
+sub   4096R/4DF6D716CC4CE214 2012-01-06 [expired: 2012-07-04]
+
+Old Key After extension*[1]:
+
+pub   4096R/81EC638ED7AE97A6 2012-01-06 [expires: 2012-07-16]
+      Key fingerprint = 4132 B874 41EA 24A4 EB5E  6DE1 81EC 638E D7AE 97A6
+uid               [  full  ] Kent Fredric (2012 Q1 & Q2) <kentfredric@gmail.com>
+uid               [  full  ] Kent Fredric <kentnl@cpan.org>
+sub   4096R/F9A6BF20EF5315EF 2012-01-06 [expires: 2012-07-16]
+sub   4096g/567647887810B389 2012-01-06 [expires: 2012-07-16]
+sub   3072D/0F597029717B1CC6 2012-01-06 [expires: 2012-07-16]
+sub   4096R/4DF6D716CC4CE214 2012-01-06 [expires: 2012-07-16]
+
+New Key:
+
+pub   4096R/ECD2C675C102CDA4 2012-07-12 [expires: 2013-07-12]
+      Key fingerprint = FC60 3605 8BA9 B773 4CCF  BCC3 ECD2 C675 C102 CDA4
+uid               [ultimate] Kent Fredric (Jul 2012 to Jul 2013) <kentfredric@gmail.com>
+sub   4096R/A84FC13AA740C720 2012-07-12 [expires: 2013-07-12]
+
+
+Copy of key can be fetched with:
+
+  gpg --keyserver pgp.mit.edu --recv-key ECD2C675C102CDA4
+
+If you had a copy of my old key, you should be able to verify the new one with
+
+  gpg --check-sigs ECD2C675C102CDA4
+
+or compare it with the fingerprints above with
+
+  gpg --fingerprint ECD2C675C102CDA4
+
+I'd love it if you would sign my key, assuming of course, you think its valid.
+
+  gpg --sign-key ECD2C675C102CDA4
+
+( Ways to prove its validity may involve having a conversation with me personally
+  in a way you can prove it is me, and getting me to confirm the above facts as true )
+
+And upload it to a public key server:
+
+  gpg --keyserver pgp.mit.edu --send-key ECD2C675C102CDA4
+
+Hopefully, this will make the world in some tiny way more secure.
+
+Footnotes
+----------
+1: To see the keys updated value, you will have to update your copy with 
+	gpg --keyserver pgp.mit.edu --recv-key 81EC638ED7AE97A6
+
+2: You may note I have longer key ID's than you. This is mostly a security
+precaution, add "keyid-format long" to your ~/.gnupg/gpg.conf if you want long
+keys too.
