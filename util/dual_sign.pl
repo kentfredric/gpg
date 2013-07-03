@@ -13,7 +13,7 @@ my $keys = {
 
 for my $key ( sort keys %{$keys} ) {
     path('.')->child('99-keyid.' . $key )->spew($keys->{$key});
-    for my $file ( qw( 01_Message.mkdn ) ) {
+    for my $file ( qw( 00_Contact.mkdn 01_Message.mkdn ) ) {
         my $source = path('.')->child( $file );
         my $target = path('.')->child( $file . '-' . $key . '.asc' );
         system(
