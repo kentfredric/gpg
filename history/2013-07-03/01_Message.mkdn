@@ -1,0 +1,55 @@
+To all it may concern, I have done one of my semi-annual key replacements.
+
+The previous replacement occurred here: https://gist.github.com/kentfredric/3102380
+
+Old Key:
+```
+pub   4096R/ECD2C675C102CDA4 2012-07-12 [expires: 2013-07-12]
+      Key fingerprint = FC60 3605 8BA9 B773 4CCF  BCC3 ECD2 C675 C102 CDA4
+uid               [ultimate] Kent Fredric (Jul 2012 to Jul 2013) <kentfredric@gmail.com>
+sub   4096R/A84FC13AA740C720 2012-07-12 [expires: 2013-07-12]
+```
+
+New Key:
+```
+pub   4096R/E854324B1366A820 2013-07-03 [expires: 2014-07-28]
+      Key fingerprint = 3D96 B36C 8FEA AC54 F5A3  DAE7 E854 324B 1366 A820
+uid               [ultimate] Kent Fredric (Jul 2013 to Jul 2014) <kentfredric@gmail.com>
+sub   4096R/E0C03061AC26E443 2013-07-03 [expires: 2014-07-28]
+```
+
+Copy of key can be fetched with:
+```
+  gpg --keyserver pgp.mit.edu --recv-key E854324B1366A820 
+```
+If you had a copy of my old key, you should be able to verify the new one with
+```
+gpg --check-sigs E854324B1366A820 
+```
+or compare it with the fingerprints above with
+```
+gpg --fingerprint E854324B1366A820 
+```
+I'd love it if you would sign my key, assuming of course, you think its valid.
+```
+gpg --sign-key E854324B1366A820 
+```
+( Ways to prove its validity may involve having a conversation with me personally
+  in a way you can prove it is me, and getting me to confirm the above facts as true )
+
+And upload it to a public key server:
+```
+gpg --keyserver pgp.mit.edu --send-key E854324B1366A820 
+```
+Hopefully, this will make the world in some tiny way more secure.
+
+For the extra paranoid, a copy of this, and future release messages will also be published to my gpg git repository:
+  https://github.com/kentfredric/gpg
+
+With copies of public keys for download, and with release notes sources dual signed by the relevant keys.
+
+Footnotes
+----------
+1: You may note I have longer key ID's than you. This is mostly a security
+precaution, add "keyid-format long" to your ~/.gnupg/gpg.conf if you want long
+keys too.
